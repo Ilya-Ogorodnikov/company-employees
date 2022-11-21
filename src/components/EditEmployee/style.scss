@@ -1,0 +1,11 @@
+.edit-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+}
