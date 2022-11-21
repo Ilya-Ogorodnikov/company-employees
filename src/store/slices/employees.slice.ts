@@ -61,12 +61,12 @@ const employeesSlices = createSlice({
       if (!action.payload.fields) {
         state.employees = [...fakeEmployees, ...state.newEmployees].map(
           element => {
-            const currentStatus = state.editedEmployees.find(
-              status => status.id === element.id,
+            const editedEmployee = state.editedEmployees.find(
+              employee => employee.id === element.id,
             );
 
-            if (currentStatus?.id === element.id) {
-              return currentStatus;
+            if (editedEmployee?.id === element.id) {
+              return editedEmployee;
             }
             return element;
           },
@@ -83,12 +83,12 @@ const employeesSlices = createSlice({
       state.employees = [...fakeEmployees, ...state.newEmployees]
         .filter(employee => employee.role === action.payload.fields)
         .map(element => {
-          const currentStatus = state.editedEmployees.find(
-            status => status.id === element.id,
+          const editedEmployee = state.editedEmployees.find(
+            employee => employee.id === element.id,
           );
 
-          if (currentStatus?.id === element.id) {
-            return currentStatus;
+          if (editedEmployee?.id === element.id) {
+            return editedEmployee;
           }
           return element;
         });
