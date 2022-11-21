@@ -1,0 +1,20 @@
+@use '../../../constants/colors';
+
+.card {
+  background-color: colors.$cardBackground;
+  height: 290px;
+  width: 850px;
+  overflow: auto;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 4px 4px 8px 0px colors.$shadowColor;
+
+  @media screen and (max-width: 850px) {
+    width: 100%;
+  }
+
+  &__title {
+    text-align: center;
+    padding-bottom: 5px;
+  }
+}

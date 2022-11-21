@@ -1,0 +1,27 @@
+@use '../../constants/colors';
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+
+  td {
+    text-align: center;
+  }
+
+  td,
+  th {
+    border: 1px solid colors.$borderCell;
+    padding: 5px 0;
+  }
+
+  tbody {
+    tr {
+      cursor: pointer;
+      transition: all 0.5s;
+
+      &:hover {
+        background-color: skyblue;
+      }
+    }
+  }
+}
