@@ -22,4 +22,11 @@ export const employeesRoles = [
   { value: 'driver', title: 'Водитель' },
 ];
 
+export const ERROR_MESSAHE_FOR_NAME = 'Введите имя сотрудника, минимум 1 буква';
+export const ERROR_MESSAHE_FOR_ROLE = 'Выберите должность сотрудника';
+export const ERROR_MESSAHE_FOR_PHONE =
+  'Заполните номер в виде +7 (ххх) хххх-хххх';
+export const ERROR_MESSAHE_FOR_BIRTHDAY =
+  'Заполните дату рождения в виде dd.mm.yyyy';
+
 export { fakeEmployees, appRoutes };

@@ -1,4 +1,10 @@
 import { toast } from 'react-toastify';
+import {
+  ERROR_MESSAHE_FOR_BIRTHDAY,
+  ERROR_MESSAHE_FOR_NAME,
+  ERROR_MESSAHE_FOR_PHONE,
+  ERROR_MESSAHE_FOR_ROLE,
+} from '../constants';
 
 export const reverseDateRepresentation = (date: string) => {
   const parts = date.split('.');
@@ -42,22 +48,22 @@ export const isValidValues = (
   birthday: string,
 ) => {
   if (isEmptyValue(name)) {
-    showToastError('Введите имя сотрудника, минимум 1 буква');
+    showToastError(ERROR_MESSAHE_FOR_NAME);
     return false;
   }
 
   if (isEmptyValue(role)) {
-    showToastError('Выберите должность сотрудника');
+    showToastError(ERROR_MESSAHE_FOR_ROLE);
     return false;
   }
 
   if (isInvalidValue(phone)) {
-    showToastError('Заполните номер в виде +7 (ххх) хххх-хххх');
+    showToastError(ERROR_MESSAHE_FOR_PHONE);
     return false;
   }
 
   if (isInvalidValue(birthday)) {
-    showToastError('Заполните дату рождения в виде dd.mm.yyyy');
+    showToastError(ERROR_MESSAHE_FOR_BIRTHDAY);
     return false;
   }
 
